@@ -917,7 +917,7 @@ vips_foreign_save_jxl_class_init(VipsForeignSaveJxlClass *class)
 	/* libjxl is fuzzed, but it's still relatively young and bugs are
 	 * still being found in jan 2022. Revise this status soon.
 	 */
-	operation_class->flags |= VIPS_OPERATION_UNTRUSTED;
+	operation_class->flags |= VIPS_OPERATION_NOCACHE;
 
 	foreign_class->suffs = vips__jxl_suffs;
 

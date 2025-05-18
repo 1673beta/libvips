@@ -1112,7 +1112,7 @@ vips_foreign_load_jxl_class_init(VipsForeignLoadJxlClass *class)
 	/* libjxl is fuzzed, but it's relatively young and bugs are
 	 * still being found in jan 2022. Revise this status soon.
 	 */
-	operation_class->flags |= VIPS_OPERATION_UNTRUSTED;
+	operation_class->flags |= VIPS_OPERATION_NOCACHE; // patched
 
 	load_class->get_flags = vips_foreign_load_jxl_get_flags;
 	load_class->header = vips_foreign_load_jxl_header;
